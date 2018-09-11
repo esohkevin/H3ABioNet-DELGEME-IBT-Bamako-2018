@@ -6,6 +6,7 @@
 ## Session 1. Sept 11, 2018
 
 ### Qucik Start
+---
 Our classroom is situated in Bamako, capital city of Mali in the West of Africa. Bamako comes 
 from a Bambara (local language in Mali) word meaning "crocodile tail". It is the capital city 
 of African music and the city of "Diatiguiya" or hospitality. The Empire of Mali was home to 
@@ -21,6 +22,7 @@ malaria vector biology, Human Genetics, Genomics and Bioinformatics, Epigenetics
 Clinical trials
 
 ### The Classroom
+---
 The classroom is made up of five training assistants (TAs) plus the node principal investigator (PI).
 
 There are about 15 participants with a diverse repertoire of backgroungs; Molecular Biology, 
