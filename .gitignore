@@ -6,17 +6,17 @@ bin-release/
 
 # Other files and folders
 .settings/
+*.pdf
+*.pptx
+*.jpg
+*.docx
+*.png
 
 # Executables
 *.swf
 *.air
 *.ipa
 *.apk
-*.pdf
-*.pptx
-*.jpg
-*.docx
-*.png
 
 # Exceptions
 !delgemeTeam.jpg
