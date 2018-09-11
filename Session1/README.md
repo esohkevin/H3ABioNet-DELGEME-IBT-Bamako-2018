@@ -1,5 +1,5 @@
 # Run Down of Session 1
-> ![](IBT_introduction_part1.png)
+![](IBT_introduction_part1.png)
 
 
 ## Aim of the course
