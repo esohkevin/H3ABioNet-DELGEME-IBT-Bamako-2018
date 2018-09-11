@@ -30,7 +30,7 @@ Biomedical Science, Clinical Biology
 
 ### The Team
 ---
-![](H3ABioNet-DELGEME-IBT-Bamako-2018/Session1/delgemeTeam.jpg)
+![](https://github.com/esohkevin/H3ABioNet-DELGEME-IBT-Bamako-2018/blob/master/Session1/delgemeTeam.jpg?raw=true)
 _H3ABioNet IBD 2018 Course Team, DELGEME Node, Bamako, Mali_
 
 ---
