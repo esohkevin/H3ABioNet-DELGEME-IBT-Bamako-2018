@@ -23,8 +23,9 @@ Clinical trials
 ### The Classroom
 The classroom is made up of five training assistants (TAs) plus the node principal investigator (PI).
 
-There are about 15 members with a diverse repertoire of backgroungs; Molecular Biology, 
+There are about 15 participants with a diverse repertoire of backgroungs; Molecular Biology, 
 Bioinformatics, Biochemistry, Mathematics, Medicine, Pharmacy, Medical Laboratory Technology, 
 Biomedical Science, Clinical Biology
 
-
+---
+![](https://licensebuttons.net/l/by-sa/3.0/88x31.png)
