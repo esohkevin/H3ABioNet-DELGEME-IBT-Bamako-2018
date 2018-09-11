@@ -28,5 +28,10 @@ There are about 15 participants with a diverse repertoire of backgroungs; Molecu
 Bioinformatics, Biochemistry, Mathematics, Medicine, Pharmacy, Medical Laboratory Technology, 
 Biomedical Science, Clinical Biology
 
+### The Team
+---
+![](H3ABioNet-DELGEME-IBT-Bamako-2018/Session1/delgemeTeam.jpg)
+_H3ABioNet IBD 2018 Course Team, DELGEME Node, Bamako, Mali_
+
 ---
 ![](https://licensebuttons.net/l/by-sa/3.0/88x31.png)
