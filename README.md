@@ -1,9 +1,8 @@
 # H3ABionet Introduction to Bioinformatics 2018, DELGEME Node, Bamako, Mali
 
-![](https://www.h3abionet.org/templates/h3abionet/images/H3BioNet-logo2.png)	
+![](https://www.h3abionet.org/templates/h3abionet/images/H3BioNet-logo2.png)	---i
 ![](http://delgeme.org/sites/all/themes/custom/delgeme/logo.png)
-
-## Session 1. Sept 11, 2018
+---
 
 ### Qucik Start
 ---
