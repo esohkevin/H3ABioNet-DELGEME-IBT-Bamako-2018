@@ -1,4 +1,4 @@
-# This function queries the pubmed database and returns total count of articles affiliated to the various institutions
+# This function queries the pubmed database and returns total count of articles affiliated to the various countries
 
 ``` 
 esearchdump() {
@@ -42,3 +42,5 @@ qrmk $file1
 	
 }
 ```
+---
+### Refer to the file **_esrchdump.md_**
