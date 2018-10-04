@@ -13,7 +13,7 @@ When ```bash Setup.sh``` is run, the function ```esearchdump``` is activated.
 running, type ```echo $SHELL``` \nFor a bash shell, this will return ```/bin/bash```
 \nPut the shell you are running in place of *bash* in ```bash Setup.sh```
 
-### What the esearchdump function does
+## What the esearchdump function does
 
 This function queries the pubmed database with country names that one provides and returns the total count of articles affiliated to the various countries.
 
@@ -38,7 +38,7 @@ columns (Check file names and contents below).
 their corresponding paths based on whether they are result files or input files for further 
 steps.
 
-### File names and content
+## File names and content
 This section is being updated...
 
 ---
