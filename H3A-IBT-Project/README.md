@@ -1,46 +1,45 @@
-# This function queries the pubmed database and returns total count of articles affiliated to the various countries
+# IBT 2018 Collaborative Project
+The project plan and objectives are being updated...
 
-``` 
-esearchdump() {
-	mkdir -p input output tempo
-	file1="tempo/*.txt"
-	qrmk() {
-		for f
-		  do
-		    [ -e "$f" ] && rm "$f"
-	        done
-        }
-qrmk $file1
+## In this directory
+* ```.myfunctions```: This file is basically a mirror of the ```esrchdump.sh``` file. 
+* ```esrchdump.sh```: This is the initial script that contains the ***esearchdump*** function.
+* ```Setup.sh```: This is the setup file for the application. It has a function that creates a
+new working directory, ***H3A-IBT-2018*** for the project in your home directory. 
 
-	for country
-          do
-	esearch -db pubmed -query "$country[AFFL]" | \
-	 efetch -format uid | 
-	  wc -l >> tempo/count1.txt
-	  echo "$country" >> tempo/count2.txt
-	  paste tempo/count2.txt tempo/count1.txt > tempo/count.txt
-	esearch -db pubmed -query "$country[AFFL]" | \
-	 efetch -format xml >> tempo/${country}.txt
-	
-# Extract PMIDS from all papers with first author affiliation containing corresponding country
-        xtract -input tempo/$country.txt -pattern PubmedArticle -PMID MedlineCitiation/PMID \
-	 -block Affiliation -if Affiliation -position first -contains "$country" \
-	 -tab "\n" -element "&PMID" | \
-	 sort -n | uniq >> tempo/pmids$country.txt
-	 cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
-        done
+When ```bash Setup.sh``` is run, the function ```esearchdump``` is activated.
 
-# Fetch (download) the papers using the previously fetched pmids
-        for ID1 in "$(cat tempo/pmids$country.txt)"
-	   do 
-	      efetch -db pubmed -id "$ID1" -format xml >> output/pap$country.txt
-	done
+> This assumes that you are running a bash shell. If you are not sure which shell you are 
+running, type ```echo $SHELL``` \nFor a bash shell, this will return ```/bin/***bash***```
+\nPut the shell you are running in place of ***_bash_*** in ```bash Setup.sh```
 
-# Move files to corresponding directories
-	mv tempo/$country* tempo/pmids$country* input
-	mv tempo/count.txt output
-	
-}
+### What the esearchdump function does
+
+This function queries the pubmed database with country names that one provides and returns the total count of articles affiliated to the various countries.
+
+In brief, the function creates three subdirectories; _input_ _output_ and _tempo_
+
+* _tempo_ will be used to temporarily store all the files that will be created when
+the function is run.
+
+* _input_ will store files that will be used as input for downstream processes.
+
+* _output_ will contain all final result files
+
+* The function then clears the tempo directory of any text files since some downstream processes
+involve appending or concatenating files together. We wouldn't want to append the contents of
+our new file with an already existing file in an event where the file already exists.
+
+* The function then searches the PubMed database for all publications that are affiliated to the
+country or countries specified. It counts the uniq PubMed IDs (PMIDs) and makes a file with two
+columns (Check file names and contents below).
+
+* The function creates a couple of files in the _tempo_ subdirectory and later moves them to 
+their corresponding paths based on whether they are result files or input files for further 
+steps.
+
+### File names and content
+This section is being updated...
+
 ```
----
-Refer to the file ***_esrchdump.sh_*** for the code
+Please refer to the file ***_esrchdump.sh_*** for the code
