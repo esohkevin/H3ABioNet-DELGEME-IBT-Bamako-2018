@@ -2,14 +2,14 @@
 
 # Create a directory in your home directory to install the application in
 
-createH3BA() {
+createH3A() {
 
 f="H3A-IBT-2018"	
 for f
      do [ -e "$f" ] && mkdir -p $HOME/$f
 done
 }
-createH3BA $f
+createH3A $f
 
 # Place the function in your home directory where bash can find it easily
 mv .myfunctions $HOME
