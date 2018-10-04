@@ -6,7 +6,7 @@ createH3A() {
 
 f="H3A-IBT-2018"	
 for f
-     do [ -e "$f" ] && mkdir -p $HOME/$f
+     do [ -e "$f" ] && mkdir -p $f $HOME/
 done
 }
 createH3A $f
