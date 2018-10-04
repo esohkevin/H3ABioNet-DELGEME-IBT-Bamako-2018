@@ -4,8 +4,8 @@ The project plan and objectives are being updated...
 ## In this directory
 * ```.myfunctions```: This file is basically a mirror of the ```esrchdump.sh``` file. 
 * ```esrchdump.sh```: This is the initial script that contains the ***esearchdump*** function.
-* ```Setup.sh```: This is the setup file for the application. It has a function that creates a
-new working directory, ***H3A-IBT-2018*** for the project in your home directory. 
+* ```Setup.sh```: This is the setup file for the application. It exports ```.myfunctions``` to 
+your path so that it can be sourced each time shell starts interactively or as login shell.
 
 When ```bash Setup.sh``` is run, the function ```esearchdump``` is activated.
 
