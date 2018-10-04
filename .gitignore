@@ -10,7 +10,6 @@ bin-release/
 *.pptx
 *.jpg
 *.docx
-.*
 
 # Executables
 *.swf
