@@ -17,7 +17,7 @@ Put the shell you are running in place of *bash* in ```bash Setup.sh```
 
 This function queries the pubmed database with country names that one provides and returns the total count of articles affiliated to the various countries.
 
-In brief, the function creates three subdirectories; ***_input_***, ***_output_*** and ***_tempo_***
+In brief, the function creates three subdirectories:  ***_input_***, ***_output_*** and ***_tempo_***
 
 * ***_tempo_*** will be used to temporarily store all the files that will be created when
 the function is run.
@@ -32,7 +32,7 @@ our new file with an already existing file in an event where the file already ex
 
 * The function then searches the PubMed database for all publications that are affiliated to the
 country or countries specified. It counts the uniq PubMed IDs (PMIDs) and makes a file with two
-columns (Check file names and contents below).
+columns (Check file names and content below).
 
 * The function creates a couple of files in the ***_tempo_*** subdirectory and later moves them to 
 their corresponding paths based on whether they are result files or input files for further 
