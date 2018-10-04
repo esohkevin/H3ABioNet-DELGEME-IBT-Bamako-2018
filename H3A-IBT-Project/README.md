@@ -17,7 +17,9 @@ Put the shell you are running in place of *bash* in ```bash Setup.sh```
 
 This function queries the pubmed database with country names that one provides and returns the total count of articles affiliated to the various countries.
 
-In brief, the function creates three subdirectories:  ***_input_***, ***_output_*** and ***_tempo_***
+In brief, the function creates three subdirectories:
+
+***_input_***, ***_output_*** and ***_tempo_***
 
 * ***_tempo_*** will be used to temporarily store all the files that will be created when
 the function is run.
