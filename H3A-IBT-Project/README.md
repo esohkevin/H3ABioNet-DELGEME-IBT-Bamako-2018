@@ -19,7 +19,7 @@ This function queries the pubmed database with country names that one provides a
 
 In brief, the function creates three subdirectories:
 
-***_input_***, ***_output_*** and ***_tempo_***
+_***input***_, ***_output_*** and ***_tempo_***
 
 * ***_tempo_*** will be used to temporarily store all the files that will be created when
 the function is run.
