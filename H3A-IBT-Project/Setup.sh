@@ -16,7 +16,5 @@ mv .myfunctions > $HOME
 # function once bash is started interactively
 echo "source $HOME/.myfunctions" >> $HOME/.bashrc
 
-createH3BA $f
-
 }
-
+createH3BA $f
