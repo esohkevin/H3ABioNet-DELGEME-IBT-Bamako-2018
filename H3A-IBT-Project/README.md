@@ -1,4 +1,4 @@
-# IBT 2018 Collaborative Project
+# H3ABioNet IBT 2018 Collaborative Project
 The project plan and objectives are being updated...
 
 ## In this directory
@@ -10,7 +10,7 @@ new working directory, ***H3A-IBT-2018*** for the project in your home directory
 When ```bash Setup.sh``` is run, the function ```esearchdump``` is activated.
 
 > This assumes that you are running a bash shell. If you are not sure which shell you are 
-running, type ```echo $SHELL```.For a bash shell, this will return ```/bin/bash```.
+running, type ```echo $SHELL```. For a bash shell, this will return ```/bin/bash```.
 Put the shell you are running in place of *bash* in ```bash Setup.sh```
 
 ## What the esearchdump function does
