@@ -5,7 +5,7 @@ myfunc=".myfunctions"
 mvFunc() {
 for func
 do
-	[ -e "$func" ] && mv "$func" $HOME
+	[ -e "$func" ] && cp "$func" $HOME
 
 done
 }

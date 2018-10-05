@@ -6,10 +6,13 @@ bin-release/
 
 # Other files and folders
 .settings/
-*.pdf
 *.pptx
 *.jpg
 *.docx
+*.mp4
+DELGEME.png
+H3ABioNet.png
+Assign*
 
 # Executables
 *.swf
