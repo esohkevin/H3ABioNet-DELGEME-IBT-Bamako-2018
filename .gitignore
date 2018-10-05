@@ -10,6 +10,9 @@ bin-release/
 *.pptx
 *.jpg
 *.docx
+*.mp4
+DELGEME.png  
+H3ABioNet.png
 
 # Executables
 *.swf
