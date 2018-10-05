@@ -12,6 +12,7 @@ bin-release/
 *.mp4
 DELGEME.png
 H3ABioNet.png
+Assign*
 
 # Executables
 *.swf
