@@ -13,6 +13,9 @@ bin-release/
 DELGEME.png
 H3ABioNet.png
 Assign*
+output
+input
+tempo
 
 # Executables
 *.swf
