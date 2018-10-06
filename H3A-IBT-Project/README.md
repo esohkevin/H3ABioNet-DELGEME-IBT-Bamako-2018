@@ -1,6 +1,11 @@
 # H3ABioNet IBT 2018 Collaborative Project
 The project plan and objectives are being updated...
 
+## Requirement
+You should have the EDirect tool to be able to run this function
+
+Click to install the [EDirect tool](https://github.com/esohkevin/OpenScienceKEHackathon/blob/master/EDirect.md)
+
 ## In this directory
 * ```.myfunctions```: This file is basically a mirror of the ```esrchdump.sh``` file. 
 * ```esrchdump.sh```: This is the initial script that contains the ***esearchdump*** function.
