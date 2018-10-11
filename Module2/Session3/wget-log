@@ -1,0 +1,11 @@
+--2018-10-09 16:18:15--  https://media.uct.ac.za/engage/theodul/ui/core.html?ltimode=true
+Resolving media.uct.ac.za (media.uct.ac.za)... 137.158.158.211
+Connecting to media.uct.ac.za (media.uct.ac.za)|137.158.158.211|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4425 (4.3K) [text/html]
+Saving to: ‘core.html?ltimode=true’
+
+core.html?ltimode=true    0%[                                ]       0  --.-KB/s               core.html?ltimode=true  100%[===============================>]   4.32K  --.-KB/s    in 0.001s  
+
+2018-10-09 16:18:16 (3.02 MB/s) - ‘core.html?ltimode=true’ saved [4425/4425]
+

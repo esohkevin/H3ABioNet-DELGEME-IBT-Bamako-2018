@@ -1,0 +1,18 @@
+#!/bin/bash
+clear
+#name=`echo Mear Make Nea Kev Molin Jok Jay`
+
+#while (($name = "M*"))
+#do echo $name
+#done
+
+echo "Let's try some conditional tests"
+x=`find *.fasta | wc -l`
+y=2
+echo "The current working directory contains $x fasta files"
+if [ $x -gt $y ] # if (($x > $y))
+then 
+	echo "there are many existing fasta files in this directory"
+else
+	echo there are very few fasta files in this directory and here is the listing && ls *.fatsa
+fi
