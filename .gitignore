@@ -10,13 +10,14 @@ bin-release/
 *.jpg
 *.docx
 *.mp4
+*(
 DELGEME.png
 H3ABioNet.png
 Assign*
 output
 input
 tempo
-*Plas
+Plas*
 
 # Executables
 *.swf
