@@ -32,19 +32,23 @@ for country
 #	 cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt 
 
 done
-xtract -input tempo/$country.txt -pattern PubmedArticle \
-	-if Affiliation -position first -contains "$country" \
-	-tab "\n" -element MedlineCitation/PMID |
-	sort -n | uniq >> tempo/pmids$country.txt 
-	cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
+#xtract -input tempo/$country.txt -pattern PubmedArticle \
+#	-if Affiliation -position first -contains "$country" \
+#	-tab "\n" -element MedlineCitation/PMID |
+#	sort -n | uniq >> tempo/pmids$country.txt 
+#	cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
 
+xtract -input tempo/$country.txt -pattern PubmedArticle -sep "\t" -PMID MedlineCitation/PMID \
+	-block Author -position first -sep "\t" \
+	-element "&PMID" LastName,Initials Affiliation | 
+	grep "$country" >> tempo/all$country.txt
+        cut -f1 tempo/all$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
 # Fetch (download) the papers using the previously fetched pmids
 for ID in "$(cat tempo/pmids$country.txt)"
    do 
 	      efetch -db pubmed -id "$ID" -format xml >> output/pap$country.txt
 done
 
-        mv tempo/count.txt output
 	mv tempo/pmids$country* input
 	mv tempo/$country* input
 }
