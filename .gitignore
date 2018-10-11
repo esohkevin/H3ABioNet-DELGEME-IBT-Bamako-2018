@@ -10,9 +10,14 @@ bin-release/
 *.jpg
 *.docx
 *.mp4
+*(
 DELGEME.png
 H3ABioNet.png
 Assign*
+output
+input
+tempo
+Plas*
 
 # Executables
 *.swf
@@ -22,8 +27,7 @@ Assign*
 
 # Exceptions
 !delgemeTeam.jpg
-!*.png
-!.gitignore
+
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important

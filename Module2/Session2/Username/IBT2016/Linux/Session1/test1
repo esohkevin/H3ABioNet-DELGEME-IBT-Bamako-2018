@@ -1,4 +1,1 @@
-The content of gene1
-gene1 4
-gene3 66
-gene7 6
+awk 'BEGIN {RS=">"} bash~/GRRGI/ {print}' PlasmoDB-39_Pfalciparum3D7_AnnotatedProteins.fasta

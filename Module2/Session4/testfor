@@ -1,0 +1,5 @@
+#!/bin/bash
+for x in file1 file2
+do head -n 3 firstvariable
+echo operation completed on file: firstvariable
+done
