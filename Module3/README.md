@@ -33,8 +33,11 @@ have variable biological function within a species.
 
 *Have you ever come across __[Xenologs](https://www.ncbi.nlm.nih.gov/pubmed/27998934)__?*
 
+## Quote of the Day
+> _Sequences are either homologous or not. There is no such thing as percent (%) homology_
+
 -----
 
-### LICENSE
+## License
 *![](https://licensebuttons.net/l/by-sa/3.0/88x31.png)*
 
