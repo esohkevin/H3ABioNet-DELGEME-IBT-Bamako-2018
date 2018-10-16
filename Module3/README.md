@@ -31,10 +31,10 @@ characters is recognizably the same and they can be aligned.
   __- Paralogous sequences:__ Sequences related through gene duplication events. Can 
 have variable biological function within a species.
 
-*Have you ever come across __[Xenologs](https://www.ncbi.nlm.nih.gov/pubmed/27998934)__?
+*Have you ever come across __[Xenologs](https://www.ncbi.nlm.nih.gov/pubmed/27998934)__?*
 
 -----
 
 ### LICENSE
-![](https://licensebuttons.net/l/by-sa/3.0/88x31.png)
+*![](https://licensebuttons.net/l/by-sa/3.0/88x31.png)*
 
