@@ -1,4 +1,11 @@
 # H3ABioNet IBT 2018 Collaborative Project
+The project essentially aims at pulling up papers from pubmed that have Universities from the various IBT Node countries as affiliations. These papers would be used to extract information like;
+ 
+ - What are the most prevalent medical conditions in these countries?
+ - How much funding are the respective governments putting in to medical research in these countries?
+ - How much external funding and which agencies are supporting researche in these countries?
+ - etc
+ 
 The project plan and objectives are being updated...
 
 ## Requirement
