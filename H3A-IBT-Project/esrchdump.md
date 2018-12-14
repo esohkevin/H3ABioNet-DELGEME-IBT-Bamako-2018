@@ -1,4 +1,4 @@
-# Deatils on the function
+# Details on the function
 This function queries the PubMed database and returns total count of articles affiliated 
 to various institutions in H3ABioNet Node countries and others.
 
