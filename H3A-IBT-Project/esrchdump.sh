@@ -37,9 +37,8 @@ do
 done
 
 # Extract PMIDS from all papers with first author affiliation containing corresponding country
-echo "Done downloading all papers affiliated to input countries!"
+echo -e "Done downloading all papers affiliated to input countries!\n"
 sleep 3
-echo -e "\n"
 
 # Extract PMIDs of papers affiliated to institutions in node countries
 echo "Now extracting PMIDs for downloaded papers. Please wait..."
@@ -60,12 +59,11 @@ do
 	fi
 done
 
-echo "Done extracting PMIDs of all papers with first author affiliation to input countries"
+echo -e "Done extracting PMIDs of all papers with first author affiliation to input countries\n"
 sleep 3
-echo -e "\n"
 
 # Fetch (download) the papers using the previously fetched pmids
-echo Now downloading papers for PMIDs supplied. Please wait...
+echo "Now downloading papers for PMIDs supplied. Please wait..."
 sleep 2
 for i in $@
 do 
