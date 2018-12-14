@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Place the function in your home directory where bash can find it easily.
-myfunc=".myfunctions"
+myfunc="esrchdump.sh"
 mvFunc() {
 for func
-do [ -e "$func" ] && cp "$func" >> $HOME/$func
+do [ -e "$func" ] && cp "$func" >> $HOME/.myfunction
 
 done
 }
