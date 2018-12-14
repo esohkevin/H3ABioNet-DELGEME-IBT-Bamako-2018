@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# This function queries the pubmed database and returns total count of 
-# articles affiliated to the various institutions
- 
 esearchdump() {
 mkdir -p input output tempo
-file1="tempo/*.txt"
+file1="output/count.txt tempo/*.txt count2.txt count1.txt"
 qrmk() {
 	for f
 	  do
@@ -13,43 +10,79 @@ qrmk() {
         done
        }
 qrmk $file1
+sleep 2
 
-for country
-     do
-       esearch -db pubmed -query "$country[AFFL]" | \
-        efetch -format uid | 
-	 wc -l >> tempo/count1.txt
-	  echo "$country" >> tempo/count2.txt
-	 paste tempo/count2.txt tempo/count1.txt > output/count.txt
-	esearch -db pubmed -query "$country[AFFL]" | 
-       efetch -format xml >> tempo/$country.txt
+echo 	"""
+	Your search summary: Search word(s): $@
+			         Search tag: AFFL (affiliation)
+	"""
+sleep 2
+
+for i in $@
+do
+	if 
+		[ ! -e input/"$i.all" ]
+	then
+		echo "Fetching papers for $i Please wait..."
+        	sleep 3
+
+        	j=$(esearch -db pubmed -query "\""$i"\"[AFFL]" | efetch -format uid | wc -l)
+        	printf '%-15s\t%d\n' "$i" "$j" >> output/count.txt
+        	esearch -db pubmed -query "\""$i"\"[AFFL]" |
+        	efetch -format xml >> input/$i.all
+	else
+		echo "$i.all exists! Skipping download for $i"
+	fi
+	echo "$i" | sed 's/=/ /g' > tempo/$i.gre
+done
 
 # Extract PMIDS from all papers with first author affiliation containing corresponding country
-#       xtract -input tempo/$country.txt -pattern PubmedArticle -PMID MedlineCitation/PMID \
-#	 -block Affiliation -if Affiliation -position first -contains "$country" \
-#	 -tab "\n" -element "&PMID" | 
-#	 sort -n | uniq >> tempo/pmids$country.txt
-#	 cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt 
+echo "Done downloading all papers affiliated to input countries!"
+sleep 3
+echo -e "\n"
 
+# Extract PMIDs of papers affiliated to institutions in node countries
+echo "Now extracting PMIDs for downloaded papers. Please wait..."
+for i in $@
+do
+	if 
+		[ ! -e input/"$i.ids" ]
+	then
+		
+		xtract -input input/$i.all -pattern PubmedArticle -sep "\t" -PMID MedlineCitation/PMID \
+        		-block Author -position first -sep "\t" \
+        		-element "&PMID" LastName,Initials Affiliation |
+        		grep -f tempo/"$i.gre" >> input/all$i.txt
+        		cut -f1 input/all$i.txt > input/$i.ids
+			echo "Extracting PMIDs for "$i""
+	else
+		echo "PMIDs already extracted for "$i""
+	fi
 done
-#xtract -input tempo/$country.txt -pattern PubmedArticle \
-#	-if Affiliation -position first -contains "$country" \
-#	-tab "\n" -element MedlineCitation/PMID |
-#	sort -n | uniq >> tempo/pmids$country.txt 
-#	cat tempo/pmids$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
 
-xtract -input tempo/$country.txt -pattern PubmedArticle -sep "\t" -PMID MedlineCitation/PMID \
-	-block Author -position first -sep "\t" \
-	-element "&PMID" LastName,Initials Affiliation | 
-	grep "$country" >> tempo/all$country.txt
-        cut -f1 tempo/all$country.txt | xargs | sed 's/ /,/g' > tempo/pmids$country.txt
+echo "Done extracting PMIDs of all papers with first author affiliation to input countries"
+sleep 3
+echo -e "\n"
+
 # Fetch (download) the papers using the previously fetched pmids
-for ID in "$(cat tempo/pmids$country.txt)"
-   do 
-	      efetch -db pubmed -id "$ID" -format xml >> output/pap$country.txt
+echo Now downloading papers for PMIDs supplied. Please wait...
+sleep 2
+for i in $@
+do 
+	if 
+		[ ! -e output/"$i.paps" ]
+	then
+		for id in `cat input/$i.ids`
+		do
+			echo Downloading papers for $i
+        		efetch -db pubmed -id "$id" -format xml >> output/$i.paps
+		done
+	else
+		echo "Papers already downloaded for "$i""
+	fi
 done
-
-	mv tempo/pmids$country* input
-	mv tempo/$country* input
+sleep 3
+echo -e "\nAll processes are now completed!"
+rm tempo/*
 }
 
