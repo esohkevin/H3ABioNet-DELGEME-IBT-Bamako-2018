@@ -72,7 +72,7 @@ do
 	then
 		for id in `cat input/$i.ids`
 		do
-			echo Downloading papers for $i
+			echo "Downloading papers for $i"
         		efetch -db pubmed -id "$id" -format xml >> output/$i.paps
 		done
 	else
